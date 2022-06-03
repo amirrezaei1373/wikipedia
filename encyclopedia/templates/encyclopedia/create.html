@@ -1,0 +1,33 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia | Create
+{% endblock %}
+
+{% block body %}
+  <h1 id="headup1">Create Your MARKDOWN</h1>
+    
+  <form method="post" class="create1">
+  {% csrf_token %}
+    <div class="label1">
+        <label>Create a</label>
+    {{ form.title.label }}
+    </div>
+    <div class="label4">
+    {{ form.title }}
+    </div>
+    <div class="label2">
+        <label>Create</label>
+    {{ form.content.label }}
+    </div>
+    <div class="label3">
+    {{ form.content }}
+    </div>
+    <br>
+    <input class="submit1" type="submit" value="Create">
+    <button class="submit2"><a class="submit3" href="{% url 'index' %}">Cancel</a></button>
+    {% for i in form.non_field_errors %}
+    <p>{{ i }}</p>
+    {% endfor %}
+  </form>  
+{% endblock %}

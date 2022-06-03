@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=width-device", initial-scale="1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row">
+            <div class="sidebar col-lg-2 col-md-3">
+                <img id="imagewiki" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Wikipedia_svg_logo.svg/200px-Wikipedia_svg_logo.svg.png" alt="wikipedia logo">
+                <h2 id="wik">Wiki</h2>
+                <form class="search1" action="{% url 'search' %}">
+                    <input class="search" type="text" name="q" placeholder="type for search">
+                </form>
+                <div class="home1">
+                    <a class="bt1" href="{% url 'index' %}">Home</a>
+                </div>
+                <div class="home2">
+                    <a class="bt2" href="{% url 'create' %}" >Create New Page</a>
+                </div>
+                <div class="home3">
+                    <a class="bt3" href="{% url 'get_random' %}">Random Page</a>
+                </div>
+                {% block nav %}
+                {% endblock %}
+            </div>
+            <div class="main col-lg-10 col-md-9">
+                {% block body %}
+                {% endblock %}
+            </div>
+        </div>
+
+    </body>
+</html>

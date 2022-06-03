@@ -1,0 +1,12 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia | {{ title }}
+{% endblock %}
+
+{% block body %}
+    <h1 class="head1">Welcome To Wikipedia</h1>
+    <h6 class="head2">The free encyclopedia that any one can edit.</h6>
+    <button class="back1"><a class="back2" href="{% url 'index' %}">Back To Home</a></button>
+    {{ entry | safe }}
+{% endblock %}

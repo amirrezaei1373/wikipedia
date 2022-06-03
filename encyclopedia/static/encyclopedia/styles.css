@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+    font-size: arial;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+    height: 35px;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+.head1{
+  font-family: serif;
+  color:rgb(51, 51, 51);
+  text-align: center;
+
+}
+.head2{
+    font-family: serif;
+    color:rgb(51, 51, 51);
+    text-align: center;
+    font-size: large;
+      
+}
+#wik {
+    font-family: serif;
+    padding-left: 80px;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.home1,.home2,.home3{
+    padding-top: 15px;
+    cursor:pointer;
+}
+.label1, .label2{
+    font-family: serif;
+}
+#headup1{
+    text-align: center;
+    color: #797979;
+}
+.submit1{
+    background-color: rgb(211, 233, 186);
+    color: #2c8030;
+    border-radius: 5px;
+    font-style: oblique;
+    width: 75px;
+}
+.submit2{
+    background-color: rgb(190, 146, 146);
+    border-radius: 5px;
+    width: 75px;
+}
+.submit3{
+    color: #800909;
+    font-style: oblique;
+}
+.back1, .back2{
+    border-radius: 5px;
+    background-color: rgb(147, 191, 221);
+    color: black;
+    height: 38px;
+}
+.alpha3{
+    border: #797979;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    background-color: rgb(147, 191, 221);
+    border-style:dotted;
+    font-size: 30px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+}

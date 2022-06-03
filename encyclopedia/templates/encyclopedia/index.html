@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h1 class="head1">Welcome To Wikipedia</h1>
+    <h6 class="head2">The free encyclopedia that any one can edit.</h6>
+    <h1>Wiki Pages <span class="alpha3">{{entries|length}}</span></h1>
+    <ul class="number1">
+        {% for entry in entries %}
+           <li class="number2"><a href="{% url 'entry' entry%}">{{ entry }}</a></li>
+           {% empty %}
+           <p>The entry does Not exsist, you create it!</p>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
